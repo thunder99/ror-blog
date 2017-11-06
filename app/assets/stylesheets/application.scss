@@ -22,11 +22,17 @@ body{
 }
 
 .btn {
-	background-color: #292929;
+    margin-top: 2%;
+    margin-left: 3%;
+	  background-color: #292929;
 }
 
 .btn:hover{
 	background-color: #c6c6c6;
+}
+
+.pt{
+  margin-left: 3%;
 }
 
 html {
@@ -38,10 +44,17 @@ body {
   margin-bottom: 100px;
 }
 
+
+.Uzh{
+  color: #e3e3e3;
+  margin-right: 50%;
+  font-size: 18px;
+  }
+
 .social-icon {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 9px;
 }
 
 .social-icon li{
@@ -51,21 +64,21 @@ body {
 
 .social-icon a {
   display: block;
-  width: 44px;
-  height: 44px;
-  line-height: 44px;
-  border-radius: 50%;
-  margin-right: 5px;
+  width: 33px;
+  height: 33px;
+  line-height: 33px;
+  border-radius: 25%;
+  margin-right: 30px;
 }
 
 .social-icon a {
-  background: rgba(255, 255, 255, 0.85); /* social icon background color */
-  color: #000; /* social icon color */
+  background: rgba(255, 255, 255, 0.85); 
+  color: #000;
 }
 
 .social-icon a:hover {
-  background: rgba(255, 255, 255, 0.25); /* social icon hover background color */
-  color: #fff; /* social icon hover color */
+  background: rgba(255, 255, 255, 0.25); 
+  color: #fff; 
 }
 
 .footer {

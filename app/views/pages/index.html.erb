@@ -1,5 +1,5 @@
 <p><%= link_to "Create new post", new_post_path, class: "btn btn-default"%></p>
-<div>
+<div class="pt">
 <% @posts.each do |post| %><br />
 <hr>
 <h1><%= link_to post.title, post_path(post.id)%></h1>
@@ -14,3 +14,4 @@ or
 <% end %>
 <% end %>
 </div>
+
