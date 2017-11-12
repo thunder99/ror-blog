@@ -4,6 +4,7 @@
 <hr>
 <h1><%= link_to post.title, post_path(post.id)%></h1>
 <p><%= post.body %></p>
+<%= image_tag post.user.avatar.url(:thumb), width: 30, height:30 %>
 <p>Author: <%= post.user.nickname%> |
 Create at: <%= post.created_at%>
 </p>

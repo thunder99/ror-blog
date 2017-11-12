@@ -10,6 +10,8 @@ gem 'devise'
 gem 'activeadmin'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
+#Paperclip for avatar
+gem "paperclip", "~> 5.0.0"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
