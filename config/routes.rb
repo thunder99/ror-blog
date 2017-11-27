@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'photos/index'
+
   get 'postcomments/new'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -10,4 +12,7 @@ Rails.application.routes.draw do
   resources :posts do
   	resources :postcomments
   end
+
+resources :photos
+
 end

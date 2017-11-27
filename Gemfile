@@ -12,6 +12,12 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 #Paperclip for avatar
 gem "paperclip", "~> 5.0.0"
+#validation
+gem 'client_side_validations'
+#Editor
+gem 'tinymce-rails'
+#photo Gallery
+gem 'carrierwave', '~> 1.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -8,6 +8,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :posts    
+  has_many :photos
   has_many :postcomments   
 
   validates :nickname, presence: true 

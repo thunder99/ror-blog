@@ -1,9 +1,10 @@
 <p><%= link_to "Create new post", new_post_path, class: "btn btn-default"%></p>
+<p><%= link_to "Show Gallery", photos_path, class: "btn btn-default"%></p>
 <div class="pt">
 <% @posts.each do |post| %><br />
 <hr>
 <h1><%= link_to post.title, post_path(post.id)%></h1>
-<p><%= post.body %></p>
+<p><%= sanitize post.body %></p>
 <%= image_tag post.user.avatar.url(:thumb), width: 30, height:30 %>
 <p>Author: <%= post.user.nickname%> |
 Create at: <%= post.created_at%>
