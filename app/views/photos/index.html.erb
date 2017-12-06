@@ -3,7 +3,10 @@
 <p>Photo ninchen</p>
 <% else %>
 <% @photos.each do |photo| %>
-<b><%= photo.name %></b>
 <p><%= image_tag(photo.photo_url) %></p>
+<p><b><%= photo.category.name %></b></p>
+<p><b><%= photo.name %></b></p>
+<p><b><%= photo.user.nickname %></b></p>
+<p><b><%= link_to "Like", vote_photo_path(photo.id) %> <%= @like[photo.id] %></b></p>
 <% end %>
 <% end %>
