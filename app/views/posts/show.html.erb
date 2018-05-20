@@ -1,22 +1,43 @@
-<h1><%= @post.title %></h1>
-<p><%= sanitize @post.body %></p>
+<center><h1 style="color:#ffffff"><%= @post.title %></h1></center>
 <hr>
+
+<p>
+<%= form_for :photo, url:  post_photos_path(post_id: @post.id)do |f| %>
+<% if flash[:notice] %>я
+<div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<p style="color:#ffffff"><%= f.label "Додати фото" %></p>
+<%= f.file_field :photo %>
+
+<p><%= f.submit "Зберегти"%></p>
+<% end %>
+
+<% @photos.each do |photo| %>я
+<%= image_tag(photo.photo, height: '340', width: '590') %>
+<% end %>
+
 <% @comments.each do |comment| %>
-<p> User <b style="color:#0489B1"><%= comment.user.nickname %></b> say</p>
-<%= comment.text %>
+<p style="color:#ffffff">Користувач <b style="color:#0489B1"><%= comment.user.nickname %></b> написав</p>
+<p style="color:#ffffff"><%= comment.text %></p>
 <hr>
 <% end %>
+
 
 <%= form_for :postcomment, url: post_postcomments_path(post_id: @post.id) do |f| %>
 <% if flash[:notice] %>
 <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 
-<p><%= f.label "Write comment" %></p>
-<%= f.text_area :text, cols: 20, rows: 5 %><br />
 
-<p><%= f.submit "Send"%></p>
+
+<p style="color:#ffffff"><%= f.label "Написати коментар" %></p>
+<%= f.text_area :text, cols: 10, rows: 5 %><br />
+
+<p><%= f.submit "Відправити"%></p>
 
 <% end %>
+</p>
+
 
 

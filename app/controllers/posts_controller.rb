@@ -5,6 +5,7 @@ before_action :set_post, only: [:edit, :update, :destroy, :show]
 
 def show
 	@comments = Postcomment.where(post_id: @post.id)
+	@photos = Photo.where(post_id: @post.id)
 end
 
 def new

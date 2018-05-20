@@ -1,19 +1,14 @@
-<p><%= link_to "Create new post", new_post_path, class: "btn btn-default"%></p>
-<p><%= link_to "Show Gallery", photos_path, class: "btn btn-default"%></p>
-<div class="pt">
-<% @posts.each do |post| %><br />
-<hr>
-<h1><%= link_to post.title, post_path(post.id)%></h1>
-<p><%= sanitize post.body %></p>
+<div class="d7 wow rubberBand" data-wow-delay="2s" data-wow-offset="20"><h1 class="choosebmw">Додай своє фото</h1></div>
+<%= link_to "Створити категорію", new_post_path, :style=> 'color:#FFFFFF;', class: "btn btn-default"%></p>
+<div class="cars">
+<% @posts.each do |post| %>
+<div class="carelem">
+<center><h3><%= link_to post.title, post_path(post.id), :style=> 'color:#FFFFFF;' %></h3></center>
 <%= image_tag post.user.avatar.url(:thumb), width: 30, height:30 %>
-<p>Author: <%= post.user.nickname%> |
+<p style="color:#ffffff">Author: <%= post.user.nickname%> |
 Create at: <%= post.created_at%>
-</p>
-<% if current_user != nil and current_user.id == post.user_id %>
-<p><%= link_to "Edit", edit_post_path(post.id) %>
-or
-<%= link_to "Delete", post_path(post.id), data: {confirm: 'Are you sure?'}, method: :delete %></p>
-<% end %>
-<% end %>
+
 </div>
+<% end %>
+
 

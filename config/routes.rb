@@ -11,12 +11,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :posts do
   	resources :postcomments
+    resources :photos 
   end
 
-resources :photos do
-  member do
-    get :vote
-  end
-end
+
 
 end
